@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # Some simple security configs, UFW configs, PAM configs, etc.
+
+sudo apt-get update
 # Making sure the necessary packages are installed
 sudo apt-get install ufw
 sudo apt-get install iptables
-sudo apt-get install clamtk
+sudo apt install clamav clamav-daemon -y
 
 # UFW configs
 sudo ufw enable

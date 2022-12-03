@@ -18,4 +18,7 @@ Used to find media files. It only searches for
   - .jpeg
   - .png
 
-Without an option, the default directory is the root directory. 
+Without an option, the default directory is the root directory.
+
+## security_configs.sh
+Sets up UFW, and ClamAV. Adds configs to PAM.

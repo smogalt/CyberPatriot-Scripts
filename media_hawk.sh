@@ -1,15 +1,20 @@
 #! /bin/bash
-
 # Simple script to find media files in the specified location
 
+# Input handling, the default value is the root directory
+input_buffer="$1"
+if [[ $input_buffer == ""]]; then
+  input_buffer="/"
+fi
+
 # Audio files
-sudo find $1 -name "*.mp3"
-sudo find $1 -name "*.wav"
+sudo find $input_buffer -name "*.mp3"
+sudo find $input_buffer -name "*.wav"
 
 # Video files
-sudo find $1 -name "*.mp4"
-sudo find $1 -name "*.mov"
+sudo find $input_buffer -name "*.mp4"
+sudo find $input_buffer -name "*.mov"
 
 # Pictures
-sudo find $1 -name "*.jpeg"
-sudo find $1 -name "*.png"
+sudo find $input_buffer -name "*.jpeg"
+sudo find $input_buffer -name "*.png"
